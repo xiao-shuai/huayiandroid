@@ -21,7 +21,6 @@ import Card from '@ant-design/react-native/lib/card'
 import {inject,observer} from 'mobx-react'
 import ImageViewer from 'react-native-image-zoom-viewer';
 import { WebView } from "react-native-webview";
-
 @inject(["mbx"])
 @observer // 监听当前组件
 class Hua extends Component{
