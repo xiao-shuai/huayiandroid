@@ -1,4 +1,4 @@
-package com.woainimen;
+package com.huayidashi;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle; 

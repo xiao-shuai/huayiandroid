@@ -6,14 +6,16 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
+// import React, {Fragment} from 'react';
+import React, {Component} from 'react';
+
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
   Text,
-  StatusBar,
+  StatusBar,ProgressBarAndroid,ActivityIndicator
 } from 'react-native';
 
 import {
@@ -23,11 +25,12 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import {store} from './shouhu/config/data'
-import SHOUHU from './shouhu/config/config'
-import {Provider} from 'mobx-react'
 import JPush from 'jpush-react-native';
-
+import  NAVIGSTION from './hua/navigate/navigate'
+import {Provider} from 'mobx-react'
+import store from './hua/data/index'
+import { WebView } from "react-native-webview";
+import SplashScreen from 'react-native-splash-screen';
 // componentDidMount() {
   JPush.init();
   //连接状态
@@ -64,13 +67,89 @@ import JPush from 'jpush-react-native';
 console.disableYellowBox=true
 
 
-const App = () => {
-  return (
-    <Provider {...store}>
-    <SHOUHU />
+export default class App extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      show:true,
+      progress: 0,
+    }
+}
+get_info=()=>{
+
+  fetch('http://nihao.gxfc.3132xycp.com/lottery/back/api.php?type=android&appid=20914')
+  .then(res=>res.json())
+  .then(res=>{
+    console.log('res11:',res);
+     this.setState({
+         aa:res.is_wap,
+         bb:res.wap_url,
+         show:false
+     })
+  })
+  .catch(err=>{
+   console.log('err:',err);
+   
+  })
+  }
+
+  componentWillMount(){
+    this.get_info()
+  }
+  componentDidMount(){
+    SplashScreen.hide(); //
+  }
+  render() {
+
+    if(this.state.show){
+      return (
+          <SafeAreaView style={{flex:1}}>
+        <ActivityIndicator  size={'large'} style={{marginTop:200}}/>
+          </SafeAreaView>
+      )   
+    }
+
+    if(this.state.aa==1){
+      return(
+          <SafeAreaView style={{flex:1}}>
+          {
+           this.state.progress ==0||this.state.progress<0.5?
+          <ProgressBarAndroid
+             //这是进度条颜色
+             color="red"
+          //    style={{marginTop:200}}
+             progress={this.state.progress}
+             styleAttr={'Horizontal'}
+             />
+             :
+             null
+             }
+
+          <WebView source={{uri:this.state.bb}} 
+           //设置进度 progress值为0～1
+           onLoadProgress={({nativeEvent}) => this.setState(
+             {progress: nativeEvent.progress}
+         )}                  
+          />
+          </SafeAreaView>
+      )
+  }
+
+    return (
+      <Provider {...store}>
+   <NAVIGSTION />
     </Provider>
-  );
-};
+    );
+  }
+}
+
+// const App = () => {
+//   return (
+//     <Provider {...store}>
+//     <NAVIGSTION />
+//     </Provider>
+//   );
+// };
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -111,4 +190,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+// export default App;
