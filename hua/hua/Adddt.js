@@ -27,13 +27,13 @@ class Adddt extends Component {
      }
      this.option={
 
-        title: 'Choose picture',
+        title: '选择图片',
         
-        cancelButtonTitle: 'cancel',
+        cancelButtonTitle: '返回',
         
-        takePhotoButtonTitle:'Taking pictures',
+        takePhotoButtonTitle:'拍照',
         
-        chooseFromLibraryButtonTitle:'gallery',
+        chooseFromLibraryButtonTitle:'相册',
         
         allowsEditing:true,
         
@@ -77,9 +77,9 @@ class Adddt extends Component {
 
     sub=()=>{
       if(this.state.con==undefined){
-        Alert.alert('prompt','Please enter the share',[{'text':'ok'}])
+        Alert.alert('提升','请输入要发布的内容',[{'text':'ok'}])
       }else{
-        Alert.alert('prompt','Sharing success, quality articles will be displayed first',[{'text':'ok'}])
+        Alert.alert('提升','分享成功, 高质量的图片我们会优先展示',[{'text':'知道了'}])
         fetch('https://www.fastmock.site/mock/19b7b866a6d1e415b64466290ab23c3d/huayidashi/find')
         .then(res=>res.json())
         .then(res=>{})
@@ -108,7 +108,7 @@ class Adddt extends Component {
             
              </TouchableOpacity>
              
-             <Button title='Publish now' buttonStyle={{backgroundColor:hua.hua_theme,marginTop:20}} 
+             <Button title='马上发布' buttonStyle={{backgroundColor:hua.hua_theme,marginTop:20}} 
               onPress={()=>{
                 this.sub()
               }}

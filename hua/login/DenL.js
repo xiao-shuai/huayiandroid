@@ -35,11 +35,11 @@ class DenL extends Component{
    
  login=()=>{
    if(this.state.user==undefined){
-     Alert.alert('prompt','Please enter your account number.',
-     [{'text':'ok'}])
+     Alert.alert('提升','请输入你的账户.',
+     [{'text':'好的'}])
    }else if(this.state.pwd==undefined){
-    Alert.alert('prompt','Please input a password',
-    [{'text':'ok'}])
+    Alert.alert('提升','请输入你的密码',
+    [{'text':'好的'}])
    } else{
      AsyncStorage.setItem('aa','ok')
      this.props.navigation.reset([NavigationActions.navigate({ routeName: 'Hua' })], 0)
@@ -51,14 +51,14 @@ class DenL extends Component{
  }   
  regg=()=>{
    if(this.state.user2==undefined){
-    Alert.alert('prompt','Please input Username',
-    [{'text':'ok'}])
+    Alert.alert('提示','请输入账户',
+    [{'text':'知道了'}])
    }else if(this.state.pwd2!==this.state.pwd3){
-    Alert.alert('prompt','Two passwords are different',
-    [{'text':'ok'}])
+    Alert.alert('提示','两次密码不一样',
+    [{'text':'知道了'}])
    }else if (this.state.pwd2==undefined){
-    Alert.alert('prompt','Please enter your password',
-    [{'text':'ok'}])
+    Alert.alert('提示','请输入你的密码',
+    [{'text':'知道了'}])
    }else {
     AsyncStorage.setItem('aa','ok')
     this.props.navigation.reset([NavigationActions.navigate({ routeName: 'Hua' })], 0)
@@ -70,7 +70,7 @@ class DenL extends Component{
  }
 
     render(){
-      const buttons = ['log in', 'registered']
+      const buttons = ['登录', '注册']
   const { selectedIndex } = this.state
 
         return(
@@ -95,7 +95,7 @@ class DenL extends Component{
     {
     selectedIndex==0?
     <View style={{alignItems:'center'}}>
-   <Input placeholder='Please input Username' containerStyle={{
+   <Input placeholder='请输入姓名' containerStyle={{
      width:hua.hua_w,marginTop:20,
    }} inputContainerStyle={{borderBottomColor:hua.hua_bg}} 
      leftIcon={
@@ -107,7 +107,7 @@ class DenL extends Component{
        this.setState({user})
       }}
    />
-   <Input placeholder='Please enter your password' 
+   <Input placeholder='请输入密码' 
    secureTextEntry={true}
    containerStyle={{
      width:hua.hua_w,marginTop:20,
@@ -122,18 +122,19 @@ class DenL extends Component{
       }}
    />
    <Button buttonStyle={{width:hua.hua_w*.9,marginTop:30,backgroundColor:hua.hua_theme}} 
-   title='log in' onPress={()=>{this.login()}}/>
+   title='登录' onPress={()=>{this.login()}}/>
    
    <TouchableOpacity onPress={()=>{
-     Linking.openURL('https://shimo.im/docs/96GPtYqXgQX3tyxQ')
+    //  Linking.openURL('https://shimo.im/docs/96GPtYqXgQX3tyxQ')
+    this.props.navigation.navigate('Page')
    }} style={{marginTop:30,alignItems:'center'}}>
-  <Text style={{color:hua.hua_hui}}>Signing in on behalf of you has agreed to the "Floral Master" Privacy Policy</Text>
+  <Text style={{color:hua.hua_hui}}>登录代表你同意《花艺隐私政策》</Text>
    </TouchableOpacity>
    
     </View>
     :
     <View style={{alignItems:'center'}}>
-<Input placeholder='Please input Username' containerStyle={{
+<Input placeholder='请输入账号' containerStyle={{
      width:hua.hua_w,marginTop:20,
    }} inputContainerStyle={{borderBottomColor:hua.hua_bg}} 
      leftIcon={
@@ -145,7 +146,7 @@ class DenL extends Component{
        this.setState({user2})
       }}
    />
-   <Input placeholder='Please enter your password' 
+   <Input placeholder='请输入你的密码' 
    secureTextEntry={true}
    containerStyle={{
      width:hua.hua_w,marginTop:20,
@@ -159,7 +160,7 @@ class DenL extends Component{
        this.setState({pwd2})
       }}
    />
-    <Input placeholder='confirm password' 
+    <Input placeholder='确认密码' 
      secureTextEntry={true}
     containerStyle={{
      width:hua.hua_w,marginTop:20,
@@ -174,14 +175,15 @@ class DenL extends Component{
       }}
    />
    <Button buttonStyle={{width:hua.hua_w*.9,marginTop:30,backgroundColor:hua.hua_theme}} 
-   title='registered' onPress={()=>{
+   title='注册' onPress={()=>{
      this.regg()
    }}/>
    
    <TouchableOpacity onPress={()=>{
-     Linking.openURL('https://shimo.im/docs/96GPtYqXgQX3tyxQ')
+    //  Linking.openURL('https://shimo.im/docs/96GPtYqXgQX3tyxQ')
+    this.props.navigation.navigate('Page')
    }} style={{marginTop:30,alignItems:'center'}}>
-  <Text style={{color:hua.hua_hui}}>The registered representative has agreed to the "Floral Master" Privacy Policy</Text>
+  <Text style={{color:hua.hua_hui}}>登录代表你同意《花艺隐私政策》</Text>
    </TouchableOpacity>
    
     </View>

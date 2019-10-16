@@ -16,6 +16,7 @@ import DenL from '../login/DenL'
 import Dtxq from '../dt/Dtxq'
 import Collection from '../wo/Collection'
 import Feedbk from '../wo/Feedbk'
+import Page from '../login/Page'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 const HUA=createBottomTabNavigator(
     {
@@ -61,12 +62,20 @@ const HUA=createBottomTabNavigator(
             headerBackTitle:null,
         })
      },
+     Page:{
+      screen:Page,
+      navigationOptions:()=>({
+          // header:null,
+          title:'隐私政策'
+          // headerBackTitle:null,
+      })
+   },
      Adddt:{
       screen:Adddt,
       navigationOptions:()=>({
           // header:null,
           headerBackTitle:null,
-          title:'Release dynamics',
+          title:'发布',
           headerTintColor:'white',
           headerStyle:{backgroundColor: hua.hua_theme,}
           
@@ -77,7 +86,7 @@ const HUA=createBottomTabNavigator(
     navigationOptions:()=>({
         // header:null,
         headerBackTitle:null,
-        title:'Details',
+        title:'详情',
         headerTintColor:'white',
        headerStyle:{backgroundColor: hua.hua_theme,}
     })

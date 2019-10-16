@@ -35,13 +35,13 @@ class Huaxq extends Component {
               img:'https://c-ssl.duitang.com/uploads/item/201810/09/20181009002920_gyqmm.thumb.700_0.png',
               name:'Abraham',
               time:'2019/3/8',
-              con:'The flowers are really fresh.'   
+              con:'这些花真的很新鲜.'   
              },
              {
                 img:'https://c-ssl.duitang.com/uploads/item/201506/18/20150618194503_CJ3ex.thumb.700_0.jpeg',
                 name:'Caesar',
                 time:'2019/3/2',
-                con:'What kind of breed is this blogger?.'   
+                con:'这个博主是什么品种的?.'   
                },
          ]
         return(
@@ -115,7 +115,7 @@ class Huaxq extends Component {
                 />
               </Card>
              <View style={{padding:20,backgroundColor:'white',marginTop:20,borderRadius:5}}>
-               <Text style={{fontSize:18,color:hua.hua_theme}}>comment</Text>
+               <Text style={{fontSize:18,color:hua.hua_theme}}>评论</Text>
                {
                    comment.map((i,k)=>{
                     return(

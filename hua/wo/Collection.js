@@ -17,7 +17,7 @@ import {hua} from '../sty/sty'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 class Collection extends Component{
     static navigationOptions = {
-        title: 'Floral master',
+        title: '我的收藏',
         headerStyle: {
           backgroundColor: '#f4511e',
         },
@@ -53,7 +53,7 @@ class Collection extends Component{
                  <Image source={require('../img/nodata.png')} style={{
                      width:100,height:100,marginTop:hua.hua_h*.2
                  }}/>
-                 <Text style={{color:hua.hua_hui2}}>No data yet</Text>
+                 <Text style={{color:hua.hua_hui2}}>暂无数据</Text>
                  </View>
              }
 

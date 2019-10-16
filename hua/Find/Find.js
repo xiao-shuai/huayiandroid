@@ -24,7 +24,7 @@ import {inject,observer} from 'mobx-react'
 @observer // 监听当前组件
 class Find extends Component{
   static navigationOptions = {
-    title: 'find',
+    title: '达人',
     headerStyle: {
       backgroundColor: '#f4511e',
     },
@@ -71,7 +71,7 @@ class Find extends Component{
         this.props.mbx.shou_fing(e)
       } 
       login_page=()=>{
-        Alert.alert('prompt','You are not logged in!',[{'text':'Later'},{'text':'log in',onPress:()=>{
+        Alert.alert('提示',' 你还没有登录!',[{'text':'稍后'},{'text':'去登录',onPress:()=>{
           this.props.navigation.navigate('DenL')
         }}])
       } 
@@ -82,17 +82,17 @@ class Find extends Component{
      .catch(err=>{})
       }
     render(){
-      const buttons = ['Grandmaster', 'activity']
+      const buttons = ['大师', '活动']
      const { selectedIndex } = this.state
      const login=this.props.mbx.login
     const hd=[
-      { tit:'Throw a summer in the raft, don`t water it, don`t fertilize it, see you fall into this way today.',
+      { tit:'把一个夏天扔进木筏里，不要浇水，不要施肥，看你今天掉进这样的境地。',
         img:'https://c-ssl.duitang.com/uploads/item/201309/14/20130914160303_YBenS.thumb.700_0.jpeg',
-        con:'The flower exhibition of the year-to-season is about to kick off. This time, the flower show has adopted a number of new technologies, and the flower friends will sign up soon.',
+        con:'一年一度的花卉展览即将开始。这次花展采用了多项新技术，花友们很快就会报名。',
       },
-      { tit:'The fruit tree I shot, who is better than mine... come one~',
+      { tit:'我射的那棵果树，谁比我的好…来吧，一个~',
         img:'https://c-ssl.duitang.com/uploads/item/201605/15/20160515132655_Gu38y.thumb.700_0.jpeg',
-        con:'The flower exhibition of the year-to-season is about to kick off. This time, the flower show has adopted a number of new technologies, and the flower friends will sign up soon.',
+        con:'一年一度的花卉展览即将开始。这次花展采用了多项新技术，花友们很快就会报名。',
       },
     ]
         return(
@@ -100,13 +100,25 @@ class Find extends Component{
          <View style={{backgroundColor:hua.hua_bg,width:hua.hua_w,flex:1}}>
 
          <View style={styles.shang_v}>
-              <Button title='Release' buttonStyle={{
+              <Button title='发布' 
+              buttonStyle={{
                   backgroundColor:'white',
-                  }} titleStyle={{color:hua.hua_theme,fontSize:16}} onPress={()=>{
-                login? this.props.navigation.navigate('Adddt'):this.login_page()
-                  }}/>
-               <Text style={styles.zj}>Find</Text>
-         </View>
+                  width:hua.hua_w*.2
+                  }} 
+                  titleStyle={{color:hua.hua_theme,}} 
+                  onPress={()=>{
+                 login?   this.props.navigation.navigate('Adddt'):this.login_page()
+                  }}
+                  />
+                <View style={{width:hua.hua_w*.2,alignItems:'center'}}>
+                <Text style={styles.zj}>发现</Text>
+                  </View>  
+               <View style={{width:hua.hua_w*.2}}>
+
+               </View>
+               
+               
+             </View>
          <ButtonGroup
       onPress={this.updateIndex}
       selectedIndex={selectedIndex}
@@ -178,12 +190,16 @@ class Find extends Component{
 export default Find 
 const styles=StyleSheet.create({
     shang_v:{
-     width:hua.hua_w,height:hua.hua_h*.12,
-     backgroundColor:hua.hua_theme,flexDirection:'row',
+    //  width:hua.hua_w,
+     height:hua.hua_h*.12,
+     backgroundColor:hua.hua_theme,
+     flexDirection:'row',
+     justifyContent:'space-between',
      alignItems:'center',
      padding:20
     },
     zj:{
-     fontSize:20,fontWeight:'500',color:'white',marginLeft:'23%'
+     fontSize:20,fontWeight:'500',color:'white',
+     
     },
  })

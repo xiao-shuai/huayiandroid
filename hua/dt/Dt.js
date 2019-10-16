@@ -24,7 +24,7 @@ import ImageViewer from 'react-native-image-zoom-viewer';
 @observer // 监听当前组件
 class Dt extends Component{
   static navigationOptions = {
-    title: 'dynamic',
+    title: '动态',
     headerStyle: {
       backgroundColor: '#f4511e',
     },
@@ -45,7 +45,7 @@ class Dt extends Component{
     this.props.mbx.shou(e)
   }  
   login_page=()=>{
-    Alert.alert('prompt','You are not logged in!',[{'text':'Later'},{'text':'log in',onPress:()=>{
+    Alert.alert('提示','你还没有登录',[{'text':'稍后'},{'text':'去登录',onPress:()=>{
       this.props.navigation.navigate('DenL')
     }}])
   }
@@ -76,16 +76,25 @@ class Dt extends Component{
         <SafeAreaView style={{flex:1,alignItems:'center'}}>
            <View style={{backgroundColor:hua.hua_bg,width:hua.hua_w,flex:1,height:'100%'}}>
            <View style={styles.shang_v}>
-              <Button title='Release' buttonStyle={{
+              <Button title='发布' 
+              buttonStyle={{
                   backgroundColor:'white',
-                  }} titleStyle={{color:hua.hua_theme,fontSize:16}} 
+                  width:hua.hua_w*.2
+                  }} 
+                  titleStyle={{color:hua.hua_theme,}} 
                   onPress={()=>{
-                login? this.props.navigation.navigate('Adddt'):this.login_page()
+                 login?   this.props.navigation.navigate('Adddt'):this.login_page()
                   }}
                   />
-               <Text style={styles.zj}>Dynamic</Text>
-             </View>
+                <View style={{width:hua.hua_w*.2,alignItems:'center'}}>
+                <Text style={styles.zj}>动态</Text>
+                  </View>  
+               <View style={{width:hua.hua_w*.2}}>
+
+               </View>
                
+               
+             </View>
                <ScrollView contentContainerStyle={{
                  width:'100%',
                  padding:20
@@ -139,12 +148,15 @@ class Dt extends Component{
 export default Dt
 const styles=StyleSheet.create({
     shang_v:{
-     width:hua.hua_w,height:hua.hua_h*.12,
+    //  width:hua.hua_w,
+    justifyContent:'space-between',
+     height:hua.hua_h*.12,
      backgroundColor:hua.hua_theme,flexDirection:'row',
      alignItems:'center',
      padding:20
     },
     zj:{
-     fontSize:20,fontWeight:'500',color:'white',marginLeft:'20%'
+     fontSize:20,fontWeight:'500',color:'white',
+   
     },
  })

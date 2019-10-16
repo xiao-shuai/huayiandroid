@@ -17,7 +17,7 @@ import {hua} from '../sty/sty'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 class Feedbk extends Component{
     static navigationOptions = {
-        title: 'Feedback',
+        title: '反馈',
         headerStyle: {
           backgroundColor: '#f4511e',
         },
@@ -42,11 +42,11 @@ class Feedbk extends Component{
     }
     feed=()=>{
         if(this.state.con==undefined){
-            Alert.alert('prompt','Please enter the content',[
-                {'text':'ok'}
+            Alert.alert('提示','请输入内容',[
+                {'text':'好的'}
             ])
         }else{
-            Alert.alert('prompt','Thank you for your feedback, we will deal with it as soon as possible',[
+            Alert.alert('提示','谢谢你的反馈, 我们将尽快处理',[
                 {'text':'ok'}
             ])
             fetch('https://www.fastmock.site/mock/19b7b866a6d1e415b64466290ab23c3d/huayidashi/feedback',{method:'POST'})
@@ -69,7 +69,7 @@ class Feedbk extends Component{
                   }}
                  />
              </View>
-            <Button title={'submit'} buttonStyle={{width:hua.hua_w*.9,marginTop:20,backgroundColor:hua.hua_theme}}
+            <Button title={'提交'} buttonStyle={{width:hua.hua_w*.9,marginTop:20,backgroundColor:hua.hua_theme}}
              onPress={()=>{
               this.feed()
              }}

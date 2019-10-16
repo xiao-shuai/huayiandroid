@@ -20,7 +20,7 @@ import {inject,observer} from 'mobx-react'
 @observer // 监听当前组件
 class Wo extends Component{
     static navigationOptions = {
-        title: 'mine',
+        title: '我的',
         headerStyle: {
           backgroundColor: '#f4511e',
         },
@@ -37,7 +37,7 @@ class Wo extends Component{
     }
 
     login_page=()=>{
-        Alert.alert('prompt','You are not logged in!',[{'text':'Later'},{'text':'log in',onPress:()=>{
+        Alert.alert('提示','你还没有登录',[{'text':'稍后'},{'text':'去登录',onPress:()=>{
           this.props.navigation.navigate('DenL')
         }}])
       }
@@ -47,25 +47,25 @@ class Wo extends Component{
         const dd=[
             {
              icons:'staro',
-             nm:'my collection',
+             nm:'我的收藏',
              page:'Collection',
              
             },
             {
                 icons:'hearto',
-                nm:'my focus',
+                nm:'我的关注',
                 page:'Collection',
                 
                },
                {
                 icons:'edit',
-                nm:'Feedback',
+                nm:'我的反馈',
                 page:'Feedbk',
                 
                },
                {
                 icons:'profile',
-                nm:'My release',
+                nm:'我的发布',
                 page:'Collection',
                 
                }
@@ -98,7 +98,7 @@ class Wo extends Component{
                    login?
                    <View style={{marginLeft:20}}>
                    <Text style={{color:'white',fontSize:18,fontWeight:'500'}}>UOOO</Text>
-                   <Text style={{fontSize:16,color:'white',marginTop:10}}>He is lazy, leaving nothing</Text>
+                   <Text style={{fontSize:16,color:'white',marginTop:10}}>这个人很懒什么都没留下</Text>
                </View>
                :null
 
@@ -126,7 +126,7 @@ class Wo extends Component{
                   })
               }
    {/* <Divider style={{height:10,backgroundColor:'#E5E7E9',marginTop:10,width:hua.hua_w}}/> */}
-       <Button title={login?'sign out':'Please log in'} buttonStyle={{
+       <Button title={login?'退出':'请登录'} buttonStyle={{
            backgroundColor:hua.hua_theme,
            marginTop:30,width:hua.hua_w*.9
     }} onPress={()=>{

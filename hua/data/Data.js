@@ -10,11 +10,11 @@ class Abc {
         this.circle=[
             {
                 u_img:'http://b-ssl.duitang.com/uploads/blog/201307/30/20130730094257_MKAse.png',
-                u_name:'Brent',
+                u_name:'晓明',
                 time:'2019/6/5',
                 gz:false,
                 like:false, 
-                con:'There are many kinds of flowers in the world now, and different flowers are opened in different seasons. Representative flowers are available every season, such as spring flowers, tulips, hyacinths, and jasmine flowers.',
+                con:'现在世界上有很多种花，不同的季节开不同的花。每个季节都有代表性的花，如春天的花、郁金香、风信子和茉莉花。',
                 con_img:[
                     {
                      c_i:'https://c-ssl.duitang.com/uploads/item/201504/06/20150406H3132_vRumt.thumb.700_0.jpeg',   
@@ -29,11 +29,11 @@ class Abc {
             },
             {
                 u_img:'https://c-ssl.duitang.com/uploads/item/201804/04/20180404172358_hnkZM.thumb.700_0.jpeg',
-                u_name:'Alan',
+                u_name:'古丽',
                 time:'2019/5/5',
                 gz:false,
                 like:false,
-                con:'Once the autumn is over, the flowers and plants in the yard are large and green, and there are not a few flowers left. Only the ornamental grass planted is still full of spirit. When the breeze blows, it is even better than flowers. It is most suitable for flowers with yards. Friends planting Oh~',
+                con:'秋天一过，院子里的花草又大又绿，还剩下不少花。只种的观赏草还精神饱满。当微风吹拂时，它甚至比花还美。它最适合有院子的花。朋友种植哦~',
                 con_img:[
                     {
                      c_i:'https://c-ssl.duitang.com/uploads/item/201503/13/20150313111856_LNw2e.thumb.700_0.jpeg',   
@@ -52,7 +52,7 @@ class Abc {
                 time:'2019/5/9',
                 gz:false,
                 like:false,
-                con:'Once the autumn is over, the flowers and plants in the yard are large and green, and there are not a few flowers left. Only the ornamental grass planted is still full of spirit. When the breeze blows, it is even better than flowers. It is most suitable for flowers with yards. Friends planting Oh~',
+                con:'秋天一过，院子里的花草又大又绿，还剩下不少花。只种的观赏草还精神饱满。当微风吹拂时，它甚至比花还美。它最适合有院子的花。朋友种植哦~',
                 con_img:[
                     {
                      c_i:'https://c-ssl.duitang.com/uploads/item/201603/02/20160302092725_UTEdM.thumb.700_0.jpeg',   
@@ -67,60 +67,60 @@ class Abc {
             },
         ],
         this.dt=[
-            {   tit:'What kind of flowers do you like',
+            {   tit:'你喜欢什么样的花?',
                 img:'https://c-ssl.duitang.com/uploads/item/201309/28/20130928211031_wV5ci.thumb.700_0.jpeg',
-                con:'Narcissus is also known as the multi-flower narcissus, the golden eucalyptus, the angiosperm, the monocotyledon, the lily, the onion, and more...',
+                con:'水仙又称多花水仙、金桉树、被子植物、单子叶植物、百合、洋葱等等…',
                 shou:false
             },
-            {   tit:'What techniques do you have for arranging flowers',
+            {   tit:'你有什么插花技巧?',
                 img:'https://c-ssl.duitang.com/uploads/item/201606/26/20160626075027_vBXdn.thumb.700_0.jpeg',
-                con:'The cold-resistant season has strong adaptability, and it is suitable for the environment of yang, leeward and air circulation. The suitable cold temperature for the cold season is 8-25 °C, and the winter can withstand -35 °C...',
+                con:'抗寒季节适应性强，适宜阳气、背风和空气流通的环境。寒冷季节适宜的低温为8-25℃，冬季可耐受-35℃。',
                 shou:false
             },
-            {   tit:'I love the chrysanthemum',
+            {   tit:'我喜欢菊花',
                 img:'https://c-ssl.duitang.com/uploads/item/201505/04/20150504112700_AY5mw.thumb.700_0.jpeg',
-                con:'Widely cultivated in southern China, it is one of the famous flowers in Europe. Species are often found in large Chinese cities and can be grown in gardens or greenhouses',
+                con:'在中国南方广泛种植，是欧洲著名的花卉之一。在中国的大城市里经常能发现物种，它们可以在花园或温室里生长。',
                 shou:false
             },
-            {   tit:'Come and enjoy the flowers',
+            {   tit:'来赏花吧',
                 img:'https://c-ssl.duitang.com/uploads/item/201509/26/20150926132946_BvFdh.thumb.700_0.jpeg',
-                con:'The former is an authentic variety, the vast majority of each plant only grows 1 flower bud, the body is thick and the flowers are large. The latter are mostly mutated hybrids, each of which can produce two or three flower buds, with weak body and fine flowers.',
+                con:'前者是正宗品种，绝大多数每株植物只长一个花蕾，体厚花大。后者大多是变异杂种，每一个都能产生两三个花蕾，体弱花细。',
                 shou:false
             },
-            {   tit:'Come and enjoy the flowers',
+            {   tit:'来赏花吧',
                 img:'https://c-ssl.duitang.com/uploads/item/201608/16/20160816185348_NXAvy.thumb.700_0.jpeg',
-                con:'There are about 2000 kinds of hyacinth horticultural varieties in the world, which are mainly divided into "Dutch species" and "Roman species"',
+                con:'世界上约有2000种风信子园艺品种，主要分为“荷兰种”和“罗马种”',
                 shou:false
             },
         ]
         this.find=[
-            {   tit:'In September, I want to plant some flower plants on the balcony, in addition to the ball, do you recommend it?',
+            {   tit:'九月，我想在阳台上种些花草，除了舞会，你推荐吗？',
                 img:'https://c-ssl.duitang.com/uploads/item/201507/09/20150709204736_ynMsC.thumb.700_0.jpeg',
-                con:'Narcissus is also known as the multi-flower narcissus, the golden eucalyptus, the angiosperm, the monocotyledon, the lily, the onion, and more...',
+                con:'水仙又称多花水仙、金桉树、被子植物、单子叶植物、百合、洋葱等等…',
                 shou:false,
                 name:'Carl'
             },
-            {   tit:'Finally, I have a small yard and slowly build a secret garden in my dreams.',
+            {   tit:'最后，我有了一个小院子，在梦中慢慢地建造了一个秘密花园。',
                 img:'https://c-ssl.duitang.com/uploads/item/201604/03/20160403201117_AHKTr.thumb.700_0.jpeg',
-                con:'The cold-resistant season has strong adaptability, and it is suitable for the environment of yang, leeward and air circulation. The suitable cold temperature for the cold season is 8-25 °C, and the winter can withstand -35 °C...',
+                con:'抗寒季节适应性强，适宜阳气、背风和空气流通的环境。寒冷季节适宜的低温为8-25℃，冬季可耐受-35℃。',
                 shou:false,
                 name:'Mars'
             },
-            {    tit:'In the summer, the shore is open, and the breeze is refreshing.',
+            {    tit:'夏天，海岸是开放的，微风清爽。',
                 img:'https://c-ssl.duitang.com/uploads/item/201507/23/20150723175027_GcHdS.thumb.700_0.jpeg',
-                con:'Widely cultivated in southern China, it is one of the famous flowers in Europe. Species are often found in large Chinese cities and can be grown in gardens or greenhouses',
+                con:'在中国南方广泛种植，是欧洲著名的花卉之一。在中国的大城市里经常能发现物种，它们可以在花园或温室里生长。',
                 shou:false,
                 name:'Kenneth'
             },
-            {    tit:'At the end of this full moon, I posted a record (and chased) my garden life.',
+            {    tit:'在这个满月的最后，我贴了一张我的花园生活记录。',
                 img:'https://c-ssl.duitang.com/uploads/item/201601/13/20160113171812_mWYzt.thumb.700_0.jpeg',
-                con:'The former is an authentic variety, the vast majority of each plant only grows 1 flower bud, the body is thick and the flowers are large. The latter are mostly mutated hybrids, each of which can produce two or three flower buds, with weak body and fine flowers.',
+                con:'前者是正宗品种，绝大多数每株植物只长一个花蕾，体厚花大。后者大多是变异杂种，每一个都能产生两三个花蕾，体弱花细。',
                 shou:false,
                 name:'Hunk'
             },
-            {   tit:'Late sunflowers complete the summer',
+            {   tit:'晚熟的向日葵完成了夏天',
                 img:'https://c-ssl.duitang.com/uploads/item/201201/18/20120118103843_sinKU.thumb.700_0.jpg',
-                con:'There are about 2000 kinds of hyacinth horticultural varieties in the world, which are mainly divided into "Dutch species" and "Roman species"',
+                con:'世界上约有2000种风信子园艺品种，主要分为“荷兰种”和“罗马种”',
                 shou:true,
                 name:'John'
             },

@@ -25,7 +25,7 @@ import { WebView } from "react-native-webview";
 @observer // 监听当前组件
 class Hua extends Component{
   static navigationOptions = {
-    title: 'circle',
+    title: '圈子',
     headerStyle: {
       backgroundColor: '#f4511e',
     },
@@ -47,8 +47,8 @@ class Hua extends Component{
     this.props.mbx.change_att(e)
   }  
   report=()=>{
-      Alert.alert('Are you sure to report it?','After the report, we will process it in 1-3 business days.',
-      [{'text':'cancel'},{'text':'Report',onPress:()=>{}}])
+      Alert.alert('确定要举报吗?','举报后我们将在1-2个工作日进行处理并给你反馈！',
+      [{'text':'取消'},{'text':'举报',onPress:()=>{}}])
   } 
   like=(e)=>{
   this.props.mbx.change_like(e)
@@ -90,7 +90,7 @@ class Hua extends Component{
      .catch(err=>{})
   }
   login_page=()=>{
-    Alert.alert('prompt','You are not logged in!',[{'text':'Later'},{'text':'log in',onPress:()=>{
+    Alert.alert('提升','你还没有登录!',[{'text':'稍后'},{'text':'去登录',onPress:()=>{
       this.props.navigation.navigate('DenL')
     }}])
   }
@@ -118,16 +118,23 @@ class Hua extends Component{
         <SafeAreaView style={{flex:1,alignItems:'center'}}>
             <View style={{backgroundColor:hua.hua_bg,width:hua.hua_w,height:'100%',flex:1}}>
              <View style={styles.shang_v}>
-              <Button title='Release' 
+              <Button title='发布' 
               buttonStyle={{
                   backgroundColor:'white',
+                  width:hua.hua_w*.2
                   }} 
                   titleStyle={{color:hua.hua_theme,}} 
                   onPress={()=>{
                  login?   this.props.navigation.navigate('Adddt'):this.login_page()
                   }}
                   />
-               <Text style={styles.zj}>circle</Text>
+                <View style={{width:hua.hua_w*.2,alignItems:'center'}}>
+                <Text style={styles.zj}>文章</Text>
+                  </View>  
+               <View style={{width:hua.hua_w*.2}}>
+
+               </View>
+               
                
              </View>
              <ScrollView 
@@ -156,7 +163,7 @@ class Hua extends Component{
                   :this.login_page()
                   }} style={{flexDirection:'row',justifyContent:'space-between'}}>
                     <Text></Text>
-                   <Text style={{fontSize:16,color:i.gz==true?hua.hua_theme:hua.hua_hui}}>{i.gz==true?'Already concerned':'attention'}</Text>
+                   <Text style={{fontSize:16,color:i.gz==true?hua.hua_theme:hua.hua_hui}}>{i.gz==true?'已关注':'关注'}</Text>
                   </TouchableOpacity>
                   }
                 />
@@ -194,13 +201,13 @@ class Hua extends Component{
                         login? this.report():this.login_page()
                         }}>
                                <AntDesign name='warning' style={{fontSize:18,color:hua.hua_hui2}}/>
-                              <Text style={{marginLeft:5,color:hua.hua_hui2}}>Report</Text>
+                              <Text style={{marginLeft:5,color:hua.hua_hui2}}>举报</Text>
                           </TouchableOpacity>
                           <TouchableOpacity style={{flexDirection:'row',marginLeft:15}}  onPress={()=>{
                          login? this.like(k):this.login_page()
                           }}>
                                <AntDesign name='like2' style={{fontSize:18,color:i.like==true?hua.hua_theme: hua.hua_hui2}}/>
-                              <Text style={{marginLeft:5,color:hua.hua_hui2}}>like</Text>
+                              <Text style={{marginLeft:5,color:hua.hua_hui2}}>喜欢</Text>
                           </TouchableOpacity>
                         </View>
                           
@@ -226,12 +233,16 @@ class Hua extends Component{
 export default Hua 
 const styles=StyleSheet.create({
    shang_v:{
-    width:hua.hua_w,height:hua.hua_h*.12,
-    backgroundColor:hua.hua_theme,flexDirection:'row',
+    // width:hua.hua_w,
+    height:hua.hua_h*.12,
+    backgroundColor:hua.hua_theme,
+    flexDirection:'row',
+    justifyContent:'space-between',
     alignItems:'center',
     padding:20
    },
    zj:{
-    fontSize:20,fontWeight:'500',color:'white',marginLeft:'20%'
+    fontSize:20,fontWeight:'500',color:'white',
+   
    },
 })

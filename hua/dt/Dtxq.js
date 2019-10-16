@@ -57,7 +57,9 @@ class Dtxq extends Component{
                </Text>
         <Image source={{uri:info.img}} style={{width:'100%',height:hua.hua_h*.2,marginTop:20}}/>
         <Text style={{color:hua.hua_hui,lineHeight:20,letterSpacing:1,marginTop:20}}>
-        To commemorate the first flower that I first raised in the bowl of lotus, it is beautiful, not the drop-shaped petals of the lotus, and the long petals, a bit like a water lily, I don’t know what kind of variety, from the bubble to the present. Ten days, so fast, there are two more pots and leaves, but there is no movement at all.
+        为了纪念我第一次在荷花盆里养大的花，它很美，不是荷花的水滴形花瓣，还有长长的花瓣，有点像睡莲，不知是什么样的品种，从泡泡到现在。十天，如此之快，又有两盆叶子，却一点动静也没有。
+        第一盆花买来的时候，我买了营养土和花盆，然后就种了。然后我就查了百度百科，还有很多贴吧什么的，去求教经验
+        但找出来的经验大同小异：浇水一次性浇透，然后见干浇水。然后如果叶子黄了就施肥，什么硫酸亚铁，什么磷酸二氢钾，还有很多的书面化比配浓度。
                </Text>
                </View>
             </ScrollView>
