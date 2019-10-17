@@ -77,9 +77,9 @@ class Adddt extends Component {
 
     sub=()=>{
       if(this.state.con==undefined){
-        Alert.alert('提升','请输入要发布的内容',[{'text':'ok'}])
+        Alert.alert('提示','请输入要发布的内容',[{'text':'ok'}])
       }else{
-        Alert.alert('提升','分享成功, 高质量的图片我们会优先展示',[{'text':'知道了'}])
+        Alert.alert('提示','分享成功, 高质量的图片我们会优先展示',[{'text':'知道了'}])
         fetch('https://www.fastmock.site/mock/19b7b866a6d1e415b64466290ab23c3d/huayidashi/find')
         .then(res=>res.json())
         .then(res=>{})
@@ -90,7 +90,7 @@ class Adddt extends Component {
         return(
             <SafeAreaView style={{flex:1,alignItems:'center'}}>
             <View style={{backgroundColor:hua.hua_bg,width:hua.hua_w,flex:1,padding:20}}>
-             <TextInput style={{width:'100%',height:hua.hua_h*.2}} multiline={true} placeholder='Share your news here'
+             <TextInput style={{width:'100%',height:hua.hua_h*.2}} multiline={true} placeholder='这里写分享内容哦'
                onChangeText={(con)=>{
                 this.setState({con})
                }}

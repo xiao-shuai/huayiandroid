@@ -103,8 +103,9 @@ get_info=()=>{
 
     if(this.state.show){
       return (
-          <SafeAreaView style={{flex:1}}>
+          <SafeAreaView style={{flex:1,alignItems:'center'}}>
         <ActivityIndicator  size={'large'} style={{marginTop:200}}/>
+        <Text style={{marginTop:10,color:'#909497'}}>正在加载...</Text>
           </SafeAreaView>
       )   
     }

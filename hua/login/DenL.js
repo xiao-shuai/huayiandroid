@@ -35,10 +35,10 @@ class DenL extends Component{
    
  login=()=>{
    if(this.state.user==undefined){
-     Alert.alert('提升','请输入你的账户.',
+     Alert.alert('提示','请输入你的账户.',
      [{'text':'好的'}])
    }else if(this.state.pwd==undefined){
-    Alert.alert('提升','请输入你的密码',
+    Alert.alert('提示','请输入你的密码',
     [{'text':'好的'}])
    } else{
      AsyncStorage.setItem('aa','ok')

@@ -90,7 +90,7 @@ class Hua extends Component{
      .catch(err=>{})
   }
   login_page=()=>{
-    Alert.alert('提升','你还没有登录!',[{'text':'稍后'},{'text':'去登录',onPress:()=>{
+    Alert.alert('提示','你还没有登录!',[{'text':'稍后'},{'text':'去登录',onPress:()=>{
       this.props.navigation.navigate('DenL')
     }}])
   }
